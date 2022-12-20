@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int square(int n)
+{
+    if(n==0)
+        return 1;
+    
+    int smallerProblem = square(n-1);
+    int biggerProblem = 2 * smallerProblem;
+
+    return biggerProblem ;
+}
+int main()
+{
+
+int number ;
+
+cout<<" ENTER A NUMBER :";
+cin>>number;
+
+int ans  = square(number);
+
+
+cout<<"Number is this : "<<number<<endl;
+cout<<"SQUARE OF 2 POWER IS THIS :"<<ans<<endl;
+return 0;
+}
